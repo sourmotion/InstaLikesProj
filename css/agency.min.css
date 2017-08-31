@@ -69,3 +69,13 @@ carousel-control.right, .carousel-control.left {
 .item span {
     font-style: normal;
 }
+
+#about {
+    
+    margin:auto;
+    
+    left: 0;
+    
+    right: 0;
+    text-align: justify;
+}
