@@ -14,9 +14,10 @@
       }
     }
   });
-
+  
   // Closes responsive menu when a scroll trigger link is clicked
   $('.js-scroll-trigger').click(function() {
+    alert('aaa');
     $('.navbar-collapse').collapse('hide');
   });
 
@@ -28,7 +29,9 @@
 
   // Collapse the navbar when page is scrolled
   $(window).scroll(function() {
-    if ($("#mainNav").offset().top > 100) {
+    var height = $("header").height();
+    console.log(height);
+    if ($("#mainNav").offset().top > 500) {
       $("#mainNav").addClass("navbar-shrink");
     } else {
       $("#mainNav").removeClass("navbar-shrink");

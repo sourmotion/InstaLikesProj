@@ -86,3 +86,10 @@ carousel-control.right, .carousel-control.left {
 
     padding: 30px;
 }
+
+#aboutbg {
+    background-image:url(../img/about-bg.jpg);
+    z-index: -1;
+    height: 100px;
+    width: 100px;
+}
