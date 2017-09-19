@@ -19,7 +19,7 @@
     <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
     <!-- Custom styles for this template -->
     <link href="css/agency.min.css" rel="stylesheet">
 
@@ -28,7 +28,7 @@
 
   </head>
 
-  <body id="page-top">
+  <body id="page-top" ng-app="myApp">
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
@@ -41,21 +41,16 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#about">About</a>
+              <a class="nav-link js-scroll-trigger" href="#pricing">Услуги</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#advantages">Our advantages</a>
+              <a class="nav-link js-scroll-trigger" href="#about">О нас</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#pricing">Pricing</a>
+              <a class="nav-link js-scroll-trigger" href="#pricing">Кабинет</a>
             </li>
             
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#portfolio">Satisfied clients</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
-            </li>
+
           </ul>
         </div>
       </div>
@@ -138,14 +133,50 @@
         </div>    
       </div>
     </div>
- 
+ <section id="HowToUse">
+        <div class="container">
+            <div class="row">
+              <div class="col-lg-12 text-center">
+                <h2 class="HowToUse-heading">How to use our service</h2>
+
+              </div>
+            </div>
+            <div class="row text-center">
+              <div class="col-md-4">
+                <span class="fa-stack fa-4x">
+                  <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                  <i class="fa  fa-stack-1x fa-inverse instruct left-item">    Зарегистрируйся</i>
+                </span>
+
+
+              </div>
+              <div class="col-md-4">
+                <span class="fa-stack fa-4x">
+                  <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                  <i class="fa  fa-stack-1x fa-inverse instruct">Оплати</i>
+                </span>
+
+
+              </div>
+              <div class="col-md-4">
+                <span class="fa-stack fa-4x">
+                  <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                  <i class="fa  fa-stack-1x fa-inverse instruct">Следи</i>
+                </span>
+
+
+              </div>
+
+            </div>
+          </div>
+    </section>
     <!-- Services -->
     <section id="about">
       
         <div class="container">
           <div class="row">
             <div class="col-lg-12 text-center">
-              <h2 class="section-heading">6 reasons to choose us</h2>
+              <h2 class="section-heading about-heading">6 reasons to choose us</h2>
               
             </div>
           </div>
@@ -155,7 +186,7 @@
                 <i class="fa fa-square fa-stack-2x text-primary"></i>
                 <i class="fa fa-check fa-stack-1x fa-inverse"></i>
               </span>
-              <h4 class="service-heading">Verified like-o-trones</h4>
+              <h4 class="service-heading">Надежность и гарантия</h4>
               
             </div>
             <div class="col-md-4">
@@ -163,7 +194,7 @@
                 <i class="fa fa-square fa-stack-2x text-primary"></i>
                 <i class="fa fa-heart fa-stack-1x fa-inverse"></i>
               </span>
-              <h4 class="service-heading">Fast growing-up popularity</h4>
+              <h4 class="service-heading">Реалистичная, постепенная накрутка лайков</h4>
               
             </div>
             <div class="col-md-4">
@@ -171,7 +202,7 @@
                 <i class="fa fa-square fa-stack-2x text-primary"></i>
                 <i class="fa fa-eye fa-stack-1x fa-inverse"></i>
               </span>
-              <h4 class="service-heading">Reasonable price</h4>
+              <h4 class="service-heading">Вам больше не надо будет следить за накруткой на каждой фотографии</h4>
               
             </div>
             <div class="col-md-4">
@@ -179,7 +210,7 @@
                 <i class="fa fa-square fa-stack-2x text-primary"></i>
                 <i class="fa fa-user-o fa-stack-1x fa-inverse"></i>
               </span>
-              <h4 class="service-heading">Reasonable price</h4>
+              <h4 class="service-heading">Оперативная обратная связь 24/7</h4>
               
             </div>
             <div class="col-md-4">
@@ -187,7 +218,7 @@
                 <i class="fa fa-square fa-stack-2x text-primary"></i>
                 <i class="fa fa-gears fa-stack-1x fa-inverse"></i>
               </span>
-              <h4 class="service-heading">Reasonable price</h4>
+              <h4 class="service-heading">Гибкая настройка услуг</h4>
               
             </div>
             <div class="col-md-4">
@@ -195,7 +226,7 @@
                 <i class="fa fa-square fa-stack-2x text-primary"></i>
                 <i class="fa fa-percent fa-stack-1x fa-inverse"></i>
               </span>
-              <h4 class="service-heading">Reasonable price</h4>
+              <h4 class="service-heading">Экономия времени и денег</h4>
               
             </div>
           </div>
@@ -204,146 +235,25 @@
     </section>
 
 
-    <section id="HowToUse">
-        <div class="container">
-            <div class="row">
-              <div class="col-lg-12 text-center">
-                <h2 class="HowToUse-heading">How to use our service</h2>
-                
-              </div>
-            </div>
-            <div class="row text-center">
-              <div class="col-md-4">
-                <span class="fa-stack fa-4x">
-                  <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                  <i class="fa  fa-stack-1x fa-inverse">Зарегистрируйся</i>
-                </span>
-                
-                
-              </div>
-              <div class="col-md-4">
-                <span class="fa-stack fa-4x">
-                  <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                  <i class="fa  fa-stack-1x fa-inverse">Оплати нужную услугу</i>
-                </span>
-                
-                
-              </div>
-              <div class="col-md-4">
-                <span class="fa-stack fa-4x">
-                  <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                  <i class="fa  fa-stack-1x fa-inverse instruct">Следи за ростом популярности</i>
-                </span>
-                
-                
-              </div>
-              
-            </div>
-          </div>
-    </section>
+
     
 
-    <!-- Portfolio Grid -->
-    <section class="bg-light" id="portfolio">
-      
-        <div class="container">
-            
 
-          <div class="row">
-            <div class="col-lg-12 text-center">
-              <h2 class="section-heading">Portfolio</h2>
-              <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-4 col-sm-6 portfolio-item">
-              <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
-                <div class="portfolio-hover">
-                  <div class="portfolio-hover-content">
-                    <i class="fa fa-plus fa-3x"></i>
-                  </div>
-                </div>
-                <img class="img-fluid" src="img/portfolio/01-thumbnail.jpg" alt="">
-              </a>
-              <div class="portfolio-caption">
-                <h4>Threads</h4>
-                <p class="text-muted">Illustration</p>
-              </div>
-            </div>
-            <div class="col-md-4 col-sm-6 portfolio-item">
-              <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
-                <div class="portfolio-hover">
-                  <div class="portfolio-hover-content">
-                    <i class="fa fa-plus fa-3x"></i>
-                  </div>
-                </div>
-                <img class="img-fluid" src="img/portfolio/02-thumbnail.jpg" alt="">
-              </a>
-              <div class="portfolio-caption">
-                <h4>Explore</h4>
-                <p class="text-muted">Graphic Design</p>
-              </div>
-            </div>
-            <div class="col-md-4 col-sm-6 portfolio-item">
-              <a class="portfolio-link" data-toggle="modal" href="#portfolioModal3">
-                <div class="portfolio-hover">
-                  <div class="portfolio-hover-content">
-                    <i class="fa fa-plus fa-3x"></i>
-                  </div>
-                </div>
-                <img class="img-fluid" src="img/portfolio/03-thumbnail.jpg" alt="">
-              </a>
-              <div class="portfolio-caption">
-                <h4>Finish</h4>
-                <p class="text-muted">Identity</p>
-              </div>
-            </div>
-            <div class="col-md-4 col-sm-6 portfolio-item">
-              <a class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
-                <div class="portfolio-hover">
-                  <div class="portfolio-hover-content">
-                    <i class="fa fa-plus fa-3x"></i>
-                  </div>
-                </div>
-                <img class="img-fluid" src="img/portfolio/04-thumbnail.jpg" alt="">
-              </a>
-              <div class="portfolio-caption">
-                <h4>Lines</h4>
-                <p class="text-muted">Branding</p>
-              </div>
-            </div>
-            <div class="col-md-4 col-sm-6 portfolio-item">
-              <a class="portfolio-link" data-toggle="modal" href="#portfolioModal5">
-                <div class="portfolio-hover">
-                  <div class="portfolio-hover-content">
-                    <i class="fa fa-plus fa-3x"></i>
-                  </div>
-                </div>
-                <img class="img-fluid" src="img/portfolio/05-thumbnail.jpg" alt="">
-              </a>
-              <div class="portfolio-caption">
-                <h4>Southwest</h4>
-                <p class="text-muted">Website Design</p>
-              </div>
-            </div>
-            <div class="col-md-4 col-sm-6 portfolio-item">
-              <a class="portfolio-link" data-toggle="modal" href="#portfolioModal6">
-                <div class="portfolio-hover">
-                  <div class="portfolio-hover-content">
-                    <i class="fa fa-plus fa-3x"></i>
-                  </div>
-                </div>
-                <img class="img-fluid" src="img/portfolio/06-thumbnail.jpg" alt="">
-              </a>
-              <div class="portfolio-caption">
-                <h4>Window</h4>
-                <p class="text-muted">Photography</p>
-              </div>
-            </div>
-          </div>
+
+    <section id = "inWork">
+      <div class="container">
+        <div class="row">
+          <span class="col-lg-6 text-left fa fa-users" id="Online" ng-controller="MyRngCtrl"> {{rngESUS}}</span>
+          <span class="col-lg-6 text-left fa fa-heart-o" id="Processing" ng-controller="MyRngCtrl">{{rngESUS}}</span>
         </div>
-    </section>
+        <div class="row">
+          <span class="col-lg-6 text-center description"  > Online</span>
+          <span class="col-lg-6 text-center description">in process</span>
+        </div>
 
+      </div>
+
+    </section>
     
 
     
@@ -354,7 +264,7 @@
         <div class="row">
           <div class="col-lg-12 text-center">
             <h2 class="section-heading">Contact Us</h2>
-            <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+
           </div>
         </div>
         <div class="row">
@@ -470,7 +380,7 @@
     </div>
 
     <!-- Modal 2 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" >
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="close-modal" data-dismiss="modal">
@@ -653,7 +563,16 @@
 
     <!-- Custom scripts for this template -->
     <script src="js/agency.min.js"></script>
-    
+    <script>
+      var app = angular.module('myApp', []);
+app.controller('MyRngCtrl', function($scope, $timeout) {
+  $scope.rngESUS = 0;
+  (function update() {
+    $timeout(update, 1000 * Math.round((Math.random() * (10-2)) + 2));
+    $scope.rngESUS = Math.round((Math.random() * (70-50)) + 50);
+  }());
+});
+    </script>
   </body>
 
 </html>
