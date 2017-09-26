@@ -4,6 +4,7 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-agency/blob/master/LICENSE)
  */
  @import url('https://fonts.googleapis.com/css?family=Lobster');
+ @import url('https://fonts.googleapis.com/css?family=Ubuntu');
  body {
      overflow-x: hidden;
      font-family: 'Roboto Slab', 'Helvetica Neue', Helvetica, Arial, sans-serif
@@ -28,7 +29,8 @@
  h6 {
      font-weight: 700;
      font-family: Montserrat, 'Helvetica Neue', Helvetica, Arial, sans-serif;
-     text-transform: uppercase
+     text-transform: uppercase;
+     padding-bottom: 4%;
  }
  section {
      padding: 100px 0
@@ -732,7 +734,7 @@
      background-color: #fff
  }
  .panel {
-      border: 1px solid #f4511e; 
+      border: 1px solid #F49E1E; 
       border-radius:0 !important;
       transition: box-shadow 0.5s;
   }
@@ -740,13 +742,13 @@
       box-shadow: 5px 0px 40px rgba(0,0,0, .2);
   }
   .panel-footer .btn:hover {
-      border: 1px solid #f4511e;
+      border: 1px solid #F49E1E;
       background-color: #fff !important;
       color: #f4511e;
   }
   .panel-heading {
       color: #fff !important;
-      background-color: #f4511e !important;
+      background-color: #F49E1E !important;
       padding: 25px;
       border-bottom: 1px solid transparent;
       border-top-left-radius: 0px;
@@ -766,7 +768,7 @@
   }
   .panel-footer .btn {
       margin: 15px 0;
-      background-color: #f4511e;
+      background-color: #F49E1E;
       color: #fff;
   }
 
@@ -847,10 +849,18 @@ carousel-control.right, .carousel-control.left {
 }
 
 .instruct {
-    font-size: 20px;
+    font-size: 23px;
+    font-weight: bold;
     align-content: center;
-    padding-top: 27px;
-    padding-left: 10px;
+    background-color: #f6bf01;
+    height: 200px;
+    width: 200px;
+    border-radius: 100px;
+    display: inline-flex;
+    justify-content: center;
+    align-items:center;
+    font-family: 'Ubuntu', sans-serif;
+
 }
 
 .fa-circle{
@@ -871,29 +881,34 @@ carousel-control.right, .carousel-control.left {
 
 #inWork {
     background-color: rgb(250,119,58);
-
+    
 
 }
 
 #Online {
     font-size: 270%;
-    padding-top: 6%;
-    padding-left: 20%;
+    padding-top: 0.5%;
+    padding-bottom: 2%;
     height: 200px;
      background-image: url(../img/online.png);
     background-size: contain;
     background-repeat: no-repeat;
-
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
     background-position-x: center;
 }
 
 
 #Processing {
-padding-left: 20%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
     font-size: 270%;
-    padding-top: 7%;
-height: 200px;
- background-image: url(../img/online.png);
+    padding-top: 0.5%;
+    padding-bottom: 2%;
+    height: 200px;
+     background-image: url(../img/online.png);
     background-size: contain;
     background-repeat: no-repeat;
 
@@ -905,3 +920,6 @@ height: 200px;
     font-family: 'Lobster';
 }
 
+.fa-heart-o {
+    color: red;
+}
