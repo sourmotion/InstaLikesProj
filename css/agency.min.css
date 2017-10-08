@@ -147,16 +147,54 @@
      background-size: cover
  }
  header.masthead .intro-text {
-     padding-top: 150px;
+     height: 100vh;
+     padding-top: 100px;
      padding-bottom: 100px
  }
+
+ .intro-lead-in{
+     padding-top: 70px;
+ }
  header.masthead .intro-text .intro-lead-in {
+
      font-size: 22px;
      line-height: 22px;
      margin-bottom: 25px;
      font-family: 'Lobster', 'Helvetica Neue', Helvetica, Arial, sans-serif
  }
+ .intro-text{
+     height: 87vh !important;
+     padding-bottom: 0!important;
+ }
+ #arr{
+     transition: 300ms;
+     margin-top:7px;
+     font-size: 42px;
+     color: #fff;
+ }
+ #arrBot{
+     transition: 1s;
+ }
+ #gobottom{
+     transition: 100ms;
+     width: 65px;
+     height:65px;
+     border-radius: 90px;
+     background-color: #cf165e;
+     /*margin-bottom: 200px;*/
+     /*margin-left: calc(50% - 50px);*/
+     border:none;
+     outline: none;
+     background-image: url(img/ic_keyboard_arrow_down_white_36px.svg);
+ }
+ #gobottom:hover{
+     cursor: pointer;
+ }
+ header.masthead{
+     height: 100vh!important;
+ }
  header.masthead .intro-text .intro-heading {
+
      font-size: 50px;
      font-weight: 700;
      line-height: 50px;
@@ -165,7 +203,7 @@
  }
  @media (min-width: 768px) {
      header.masthead .intro-text {
-         padding-top: 300px;
+         padding-top: 150px;
          padding-bottom: 200px
      }
      header.masthead .intro-text .intro-lead-in {
@@ -184,6 +222,12 @@
          text-transform: uppercase
      }
  }
+@media (min-width: 1024px) {
+    header.masthead .intro-text {
+        padding-top: 25%;
+        padding-bottom: 200px
+    }
+}
  .service-heading {
      margin: 15px 0;
      text-transform: none;
@@ -849,13 +893,14 @@ carousel-control.right, .carousel-control.left {
 }
 
 .instruct {
+    color:#fff;
     font-size: 23px;
-    font-weight: bold;
+    /*font-weight: bold;*/
     align-content: center;
-    background-color: #f6bf01;
-    height: 200px;
-    width: 200px;
-    border-radius: 100px;
+    background-color: #F49E1E !important;
+    height: 240px;
+    width: 240px;
+    border-radius: 180px;
     display: inline-flex;
     justify-content: center;
     align-items:center;
@@ -880,8 +925,8 @@ carousel-control.right, .carousel-control.left {
 }
 
 #inWork {
-    background-color: rgb(250,119,58);
-    
+    /*background-color: rgb(250,119,58);*/
+    background: linear-gradient(to bottom left, #f64e2d, #f49e1e);
 
 }
 
