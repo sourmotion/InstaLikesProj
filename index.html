@@ -146,7 +146,7 @@
 
               </div>
             </div>
-            <div class="row text-center">
+            <div class="row text-center" id="rowTextCenter">
               <div class="col-md-4">
                 <div class="instruct">Зарегистрируйся</div>
 
@@ -400,6 +400,18 @@ app.controller('MyRngCtrl', function($scope, $timeout) {
             },4000)
         });
     </script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+        $(document).scroll(function () {
+            var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            if(parseInt(scrollTop)>=1100) {
+//                console.log("Текущая прокрутка: " + scrollTop);
+                document.getElementById("rowTextCenter").style.marginLeft = "0px ";
+            }
+        });
+
+    })
+  </script>
   </body>
 
 

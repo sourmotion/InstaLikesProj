@@ -1,4 +1,4 @@
-/*!
+	/*!
  * Start Bootstrap - Agency v4.0.0-beta (http://startbootstrap.com/template-overviews/agency)
  * Copyright 2013-2017 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-agency/blob/master/LICENSE)
@@ -168,7 +168,7 @@
  }
  #arr{
      transition: 300ms;
-     margin-top:7px;
+     margin-top:10px;
      font-size: 42px;
      color: #fff;
  }
@@ -845,7 +845,7 @@ carousel-control.right, .carousel-control.left {
 }
 
 #about {
-    background-image:url(../img/about-bg.jpg);
+    background-image:url(../img/laptop-computer-macbook-writing-screen-apple-13-pxhere.com.jpg);
     background-size: cover;
     background-attachment: fixed;
     margin-left:auto;
@@ -927,7 +927,12 @@ carousel-control.right, .carousel-control.left {
 #inWork {
     /*background-color: rgb(250,119,58);*/
     background: linear-gradient(to bottom left, #f64e2d, #f49e1e);
+    box-shadow: inset 0px 0px 15px rgba(0,0,0,0.5);
 
+}
+#rowTextCenter{
+    transition: 1s;
+    margin-left:-10000px;
 }
 
 #Online {
