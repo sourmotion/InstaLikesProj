@@ -32,6 +32,11 @@
      text-transform: uppercase;
      padding-bottom: 4%;
  }
+
+ .container,#mainNav{
+     transition: 400ms !important;
+ }
+
  section {
      padding: 100px 0
  }
@@ -144,7 +149,19 @@
      -webkit-background-size: cover;
      -moz-background-size: cover;
      -o-background-size: cover;
-     background-size: cover
+     background-size: cover;
+     background:
+
+             linear-gradient( #400080, transparent),
+
+
+
+             linear-gradient(
+                     200deg, #d047d1, #ff0000,    #ffff00);
+     /*background: #f09433;*/
+
+     /*background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);*/
+
  }
  header.masthead .intro-text {
      height: 100vh;
@@ -819,6 +836,10 @@
   .container-fluid {
     padding: 60px 50px;
 }
+  html, body{
+      transition: 400ms ;
+  }
+
 carousel-control.right, .carousel-control.left {
     background-image: none;
     color: #f4511e;
@@ -845,7 +866,8 @@ carousel-control.right, .carousel-control.left {
 }
 
 #about {
-    background-image:url(../img/laptop-computer-macbook-writing-screen-apple-13-pxhere.com.jpg);
+    /*background-image:url(../img/laptop-computer-macbook-writing-screen-apple-13-pxhere.com.jpg);*/
+    background-color: #1b1e21;
     background-size: cover;
     background-attachment: fixed;
     margin-left:auto;
@@ -931,8 +953,70 @@ carousel-control.right, .carousel-control.left {
 
 }
 #rowTextCenter{
-    transition: 1s;
-    margin-left:-10000px;
+    transition: 2s;
+    margin-left:-100%;
+}
+
+/*body{*/
+    /*display: in;*/
+/*}*/
+
+
+#registration,#loginPage{
+
+    box-shadow: 0 0 20px black;
+    transition: 350ms;
+    position: fixed;
+    display: inline-block;
+    background: #f5f5f5 !important;
+    top:0;
+    left: -100%;
+    margin-left:0;
+    height: 100vh;
+    width: 80%;
+    /*align-content: center;*/
+
+}
+.formWrapper{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.formWrapper>form>input{
+     border-radius: 3px;
+     border:1px solid silver;
+     width: 300px;
+     height:50px;
+     margin-bottom: 20px !important;
+ }
+.formWrapper>form>input:hover{
+    outline: none;
+}
+.formWrapper>form{
+    margin-top: -200px;
+}
+.specialLi{
+    margin-right: 0; width: auto;
+}
+#specialLi{
+    margin-right: 0; width: auto;
+}
+#logo{
+    font-family: 'Lobster';font-size: 2.5em; margin-left: 25%;
+}
+.formWrapper>form>input:focus{
+    outline: none;
+}
+.formWrapper>form>input[type=submit]:hover{
+    cursor: pointer;
+}
+
+
+.clear{
+    clear: both;
 }
 
 #Online {
@@ -947,6 +1031,17 @@ carousel-control.right, .carousel-control.left {
     justify-content: center;
     align-items: center;
     background-position-x: center;
+}
+
+.exit{
+    margin-right: 15px;
+    float: right;
+    width:50px;
+    height: 50px;
+    background: url("../img/ic_close_black_64px.svg");
+}
+.exit:hover{
+    cursor: pointer;
 }
 
 

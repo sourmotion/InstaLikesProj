@@ -31,11 +31,43 @@
   </head>
 
   <body id="page-top" ng-app="myApp">
+    <?php require_once 'login_signin/checkerToken.php'; tokenSetAndRight();?>
+        <div id="registration">
+          <div class="exit" ></div>
+          <div class="clear"></div>
+          <div class="formWrapper">
+
+          <form action="login_signin/register.php" method="post" style="margin-top: -200px;">
+            <a class="navbar-brand js-scroll-trigger" href="" id="logo" style="">InstaLiker</a><br>
+            <input type="text" name="name" placeholder="Ваше имя" /><br>
+            <input type="text" name="surname" placeholder="Ваша фамилия" /><br>
+            <input type="text" name="email" placeholder="Ваш email" /><br>
+            <input type="password" name="password" placeholder="Пароль" /><br>
+            <input type="submit" name="submit" value="Зарегестрироваться" />
+          </form>
+          </div>
+
+        </div>
+        <div id="loginPage">
+          <div class="exit" ></div>
+          <div class="clear"></div>
+          <div class="formWrapper">
+
+            <form action="login_signin/login.php" method="post" style="margin-top: -200px;">
+              <a class="navbar-brand js-scroll-trigger" href="" id="logo" style="">InstaLiker</a><br>
+              <input type="text" name="email" placeholder="Ваш email" /><br>
+              <input type="password" name="password" placeholder="Пароль" /><br>
+              <input type="submit" name="submit" value="Войти" />
+            </form>
+          </div>
+        </div>
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
       <div class="container">
         <a class="navbar-brand js-scroll-trigger" href="#page-top">InstaLiker</a>
+
+
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           Menu
           <i class="fa fa-bars"></i>
@@ -51,6 +83,23 @@
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#pricing">Кабинет</a>
             </li>
+              <?php
+              require_once 'login_signin/checkerToken.php';
+              if(!tokenSetAndRight()):
+                  ?>
+              <li class="nav-item" class="specialLi" style="padding-top: 13px; ">
+                  <span class="" href="" style="margin-left:100px;margin-right:-5vw;font-size: 90%;"><a href="" id="login">Войти</a> <span style="margin-left: 10px; margin-right: 10px; color : #ffffff; "> или </span><a
+                              href="" id="signin">зарегистрироваться</a></span>
+              </li>
+                  <?php
+              else:
+                  php?>
+                  <li class="nav-item" class="specialLi" style="margin-right: -300px; width: 400px; padding-top: 13px; ">
+                      <span class="" href="" style="margin-left:100px;margin-right:-5vw;font-size: 90%;"><span style="margin-left: 10px; margin-right: 10px; color : #ffffff; "> Вы авторизованы </span><a href="login_signin/logout.php" id="logout">Выйти</a></span>
+                  </li>
+              <?php endif;?>
+
+
             
 
           </ul>
@@ -400,18 +449,40 @@ app.controller('MyRngCtrl', function($scope, $timeout) {
             },4000)
         });
     </script>
-  <script type="text/javascript">
+  <script async type="text/javascript">
     $(document).ready(function () {
+//        var start = Date.now(); // сохранить время начала
+//        var k=-800;
+//        var timer = setInterval(function() {
+//            // вычислить сколько времени прошло с начала анимации
+//            var timePassed = Date.now() - start;
+//
+//            if (timePassed >= 5000 ) {
+//                clearInterval(timer); // конец через 2 секунды
+//                return;
+//            }
+//            if(k>= 0)
+//                return;
+//
+//            // рисует состояние анимации, соответствующее времени timePassed
+//            document.getElementById("rowTextCenter").style.marginLeft = k+"%";
+//            console.log(k);
+//            k+=5;
+//
+//        }, 10);
+
         $(document).scroll(function () {
             var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
             if(parseInt(scrollTop)>=1100) {
 //                console.log("Текущая прокрутка: " + scrollTop);
                 document.getElementById("rowTextCenter").style.marginLeft = "0px ";
+
             }
         });
 
     })
   </script>
+    <script type="text/javascript" src="js/leftbarAnimation.js"></script>
   </body>
 
 
