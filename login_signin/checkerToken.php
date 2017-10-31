@@ -1,5 +1,5 @@
 <?php
-    require_once './db/DbConnection.php';
+    require_once $_SERVER['DOCUMENT_ROOT'].'/db/DbConnection.php';
 
         function tokenSetAndRight()
         {

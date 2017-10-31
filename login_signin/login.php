@@ -7,6 +7,8 @@ require_once ("../db/dbConnection.php");
     $email = $_POST['email'];
     $password=md5(md5($_POST['password']));
 
+//    echo $email . " ". $password;
+
     $res = $dbconnect->query("SELECT 1,idUser FROM User WHERE email = '$email' AND password = '$password'");
     $token= md5(uniqid(rand(), true));
     $result = $res->fetch_assoc();

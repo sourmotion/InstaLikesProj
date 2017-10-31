@@ -8,11 +8,12 @@
     INSERT INTO User(UserName , UserSurname,email,password)
     VALUES ('{$_POST['name']}','{$_POST['surname']}','{$_POST['email']}','{$password}');
     ";
-    print_r($_COOKIE);
+//    print_r($_COOKIE);
     
     $dbconnect->query($query);
-
-
     $dbconnect->dissconnectFromDb();
 
-    header("Location: ../");
+
+
+
+    header("Location: login.php?email={$_POST['email']}&password={$_POST['password']}");

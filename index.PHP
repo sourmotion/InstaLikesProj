@@ -22,6 +22,8 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
           rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+      <script src="vendor/jquery/jquery.min.js"></script>
+      <script type="text/javascript" src="js/leftbarAnimation.js"></script>
     <!-- Custom styles for this template -->
     <link href="css/agency.min.css" rel="stylesheet">
 
@@ -32,6 +34,10 @@
 
   <body id="page-top" ng-app="myApp">
     <?php require_once 'login_signin/checkerToken.php'; tokenSetAndRight();?>
+        <div id="cabinetPage">
+            <div class="exit" ></div>
+            <div class="clear"></div>
+        </div>
         <div id="registration">
           <div class="exit" ></div>
           <div class="clear"></div>
@@ -39,11 +45,12 @@
 
           <form action="login_signin/register.php" method="post" style="margin-top: -200px;">
             <a class="navbar-brand js-scroll-trigger" href="" id="logo" style="">InstaLiker</a><br>
-            <input type="text" name="name" placeholder="Ваше имя" /><br>
-            <input type="text" name="surname" placeholder="Ваша фамилия" /><br>
-            <input type="text" name="email" placeholder="Ваш email" /><br>
-            <input type="password" name="password" placeholder="Пароль" /><br>
+            <input type="text" name="name" placeholder="Ваше имя" required /><br>
+            <input type="text" name="surname" placeholder="Ваша фамилия" required /><br>
+            <input type="text" name="email" placeholder="Ваш email" required /><br>
+            <input type="password" name="password" placeholder="Пароль" required /><br>
             <input type="submit" name="submit" value="Зарегестрироваться" />
+              <p style="margin-left: 29%; ">либо <a href="" style="font-size: 1.2em;" id="relogin" >Войти </a></p>
           </form>
           </div>
 
@@ -55,10 +62,12 @@
 
             <form action="login_signin/login.php" method="post" style="margin-top: -200px;">
               <a class="navbar-brand js-scroll-trigger" href="" id="logo" style="">InstaLiker</a><br>
-              <input type="text" name="email" placeholder="Ваш email" /><br>
-              <input type="password" name="password" placeholder="Пароль" /><br>
+              <input type="text" name="email" placeholder="Ваш email" required /><br>
+              <input type="password" name="password" placeholder="Пароль" required /><br>
               <input type="submit" name="submit" value="Войти" />
+                <p style="margin-left: 16%;">либо <a href="" style="font-size: 1.1em;" id="reregister" >Зарегестрироваться </a></p>
             </form>
+
           </div>
         </div>
 
@@ -81,19 +90,22 @@
               <a class="nav-link js-scroll-trigger" href="#about">О нас</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#pricing">Кабинет</a>
+              <a class="nav-link js-scroll-trigger" id="cabinet" >Кабинет</a>
             </li>
               <?php
               require_once 'login_signin/checkerToken.php';
               if(!tokenSetAndRight()):
                   ?>
+
               <li class="nav-item" class="specialLi" style="padding-top: 13px; ">
                   <span class="" href="" style="margin-left:100px;margin-right:-5vw;font-size: 90%;"><a href="" id="login">Войти</a> <span style="margin-left: 10px; margin-right: 10px; color : #ffffff; "> или </span><a
-                              href="" id="signin">зарегистрироваться</a></span>
+                              href="" id="signin">Зарегистрироваться</a></span>
               </li>
                   <?php
               else:
-                  php?>
+                  ?>
+
+
                   <li class="nav-item" class="specialLi" style="margin-right: -300px; width: 400px; padding-top: 13px; ">
                       <span class="" href="" style="margin-left:100px;margin-right:-5vw;font-size: 90%;"><span style="margin-left: 10px; margin-right: 10px; color : #ffffff; "> Вы авторизованы </span><a href="login_signin/logout.php" id="logout">Выйти</a></span>
                   </li>
@@ -207,7 +219,7 @@
 
               </div>
               <div class="col-md-4">
-                <div class="instruct" style="background-color: #f64e2d !important">Следи за ростом популярностью</div>
+                <div class="instruct" style="background-color: #f64e2d !important">Следи за ростом популярности</div>
 
 
               </div>
@@ -390,7 +402,7 @@
 
     
     <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
+
     <script src="vendor/popper/popper.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 
@@ -482,7 +494,8 @@ app.controller('MyRngCtrl', function($scope, $timeout) {
 
     })
   </script>
-    <script type="text/javascript" src="js/leftbarAnimation.js"></script>
+
+    <script type="text/javascript" src="js/rightbarAnimation.js"></script>
   </body>
 
 
